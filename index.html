@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>SecureTheCloud</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(135deg,#05070f,#0a0f1c);
+  color: white;
+  scroll-behavior: smooth;
+}
+
+/* NAV */
+nav {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 50px;
+  position: sticky;
+  top: 0;
+  backdrop-filter: blur(10px);
+}
+
+nav img {
+  height: 45px;
+}
+
+/* HERO */
+.hero {
+  text-align: center;
+  padding: 120px 20px;
+}
+
+.hero h1 {
+  font-size: 50px;
+  background: linear-gradient(90deg,#00c3ff,#00ffcc);
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+.hero p {
+  color: #aaa;
+  max-width: 600px;
+  margin: auto;
+}
+
+button {
+  margin-top: 25px;
+  padding: 14px 35px;
+  border-radius: 30px;
+  border: none;
+  background: linear-gradient(90deg,#00c3ff,#00ffcc);
+  cursor: pointer;
+  font-size: 16px;
+  transition: 0.3s;
+}
+
+button:hover {
+  transform: scale(1.1);
+}
+
+/* SECTION */
+section {
+  padding: 80px 20px;
+  text-align: center;
+}
+
+/* SERVICES */
+.services {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.card {
+  width: 260px;
+  margin: 15px;
+  padding: 25px;
+  border-radius: 15px;
+  background: rgba(255,255,255,0.05);
+  backdrop-filter: blur(15px);
+  transition: 0.4s;
+}
+
+.card:hover {
+  transform: translateY(-12px);
+  box-shadow: 0 0 25px #00c3ff;
+}
+
+/* WHY US */
+.why {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.why div {
+  margin: 15px;
+  width: 250px;
+}
+
+/* CONTACT */
+.contact-box {
+  line-height: 2;
+  color: #ccc;
+}
+
+/* FOOTER */
+footer {
+  background: #000;
+  padding: 25px;
+  text-align: center;
+  color: #777;
+}
+
+/* ANIMATION */
+.reveal {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: 1s;
+}
+
+.reveal.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+</style>
+</head>
+
+<body>
+
+<nav>
+  <img src="logo.png">
+</nav>
+
+<div class="hero">
+  <h1>Stop Cloud Breaches Before They Happen</h1>
+  <p>We secure your cloud infrastructure by identifying risks, fixing vulnerabilities, and implementing strong protection strategies globally.</p>
+  <button onclick="scrollToSection('contact')">Get Free Security Audit</button>
+</div>
+
+<section class="reveal">
+  <h2>Our Services</h2>
+  <div class="services">
+    <div class="card">Cloud Security Audit</div>
+    <div class="card">IAM & Access Review</div>
+    <div class="card">Misconfiguration Detection</div>
+    <div class="card">Security Hardening</div>
+  </div>
+</section>
+
+<section class="reveal">
+  <h2>Why Choose SecureTheCloud</h2>
+  <div class="why">
+    <div>✔️ Fast Risk Identification</div>
+    <div>✔️ Cost Effective Security</div>
+    <div>✔️ Remote Global Services 🌍</div>
+    <div>✔️ Practical Solutions (Not Just Reports)</div>
+  </div>
+</section>
+
+<section class="reveal">
+  <h2>What We Offer</h2>
+  <p>
+    SecureTheCloud helps businesses secure their cloud systems by identifying vulnerabilities and implementing real-world fixes.
+    We provide remote services across the globe ensuring your infrastructure stays protected.
+  </p>
+</section>
+
+<section id="contact" class="reveal">
+  <h2>Contact</h2>
+  <div class="contact-box">
+    📧 securethecloud.in@gmail.com <br>
+    📞 +91 9347987217 <br>
+    📍 659, Uppal Bhagayath, Hyderabad, Telangana – 500039 <br>
+    🌍 Remote services available worldwide
+  </div>
+</section>
+
+<footer>
+  © 2026 SecureTheCloud | All Rights Reserved
+</footer>
+
+<script>
+function scrollToSection(id) {
+  document.getElementById(id).scrollIntoView({behavior: "smooth"});
+}
+
+window.addEventListener("scroll", function() {
+  document.querySelectorAll(".reveal").forEach(el => {
+    let top = el.getBoundingClientRect().top;
+    if (top < window.innerHeight - 100) {
+      el.classList.add("active");
+    }
+  });
+});
+</script>
+
+</body>
+</html>
