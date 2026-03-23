@@ -127,13 +127,33 @@ footer {
   opacity: 1;
   transform: translateY(0);
 }
+  .logo-container {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo-container img {
+  height: 60px;
+}
+
+.logo-container h2 {
+  font-size: 20px;
+  font-weight: bold;
+  background: linear-gradient(90deg,#00c3ff,#00ffcc);
+  -webkit-background-clip: text;
+  color: transparent;
+}
 </style>
 </head>
 
 <body>
 
 <nav>
-  <img src="logo.png">
+  <div class="logo-container">
+    <img src="logo.png">
+    <span>SecureTheCloud</span>
+  </div>
 </nav>
 
 <div class="hero">
@@ -173,7 +193,7 @@ footer {
 <section id="contact" class="reveal">
   <h2>Contact</h2>
   <div class="contact-box">
-    📧 securethecloud.in@gmail.com <br>
+    📧 securethecloud.in@gmail.com 
     📞 +91 9347987217 <br>
     📍 659, Uppal Bhagayath, Hyderabad, Telangana – 500039 <br>
     🌍 Remote services available worldwide
